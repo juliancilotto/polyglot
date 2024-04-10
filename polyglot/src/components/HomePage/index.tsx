@@ -2,6 +2,7 @@ import { Map } from "@/assets/Images/Map";
 import { PolyGlot } from "@/assets/Images/PolyGlot";
 import { CaretDown } from "@/assets/icons/CaretDown";
 import { Box, Button, Container, HStack, Stack, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
 export const HomePage = () => {
@@ -13,34 +14,21 @@ export const HomePage = () => {
             <HStack justify="space-between" width="100%">
               <PolyGlot />
               <HStack spacing="8">
-                <Button
-                  fontWeight="bold"
-                  border="2px solid #F1DAC4"
-                  variant="outline"
-                  color="#F1DAC4"
-                  _hover={{
-                    bgColor: "#EAC7A7",
-                    color: "#0D0C1D",
-                    fontWeight: "bold",
-                  }}
-                >
-                  ENTRAR
-                </Button>
-                <Button
-                  fontWeight="bold"
-                  variant="transparent"
-                  color="#F1DAC4"
-                  _hover={{
-                    bgColor: "#EAC7A7",
-                    color: "#0D0C1D",
-                    fontWeight: "bold",
-                  }}
-                >
-                  <HStack>
-                    <Text>IDIOMA</Text>
-                    <CaretDown />
-                  </HStack>
-                </Button>
+                <Link href="/login">
+                  <Button
+                    fontWeight="bold"
+                    border="2px solid #F1DAC4"
+                    variant="outline"
+                    color="#F1DAC4"
+                    _hover={{
+                      bgColor: "#EAC7A7",
+                      color: "#0D0C1D",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    ENTRAR
+                  </Button>
+                </Link>
               </HStack>
             </HStack>
           </HStack>
@@ -63,18 +51,20 @@ export const HomePage = () => {
                   oportunidades profissionais, você está no lugar certo!
                 </Text>
                 <Box>
-                  <Button
-                    fontWeight="bold"
-                    variant="outline"
-                    bgColor="#F1DAC4"
-                    _hover={{
-                      bgColor: "#EAC7A7",
-                      color: "#0D0C1D",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    CADASTRE-SE
-                  </Button>
+                  <Link href="/signup">
+                    <Button
+                      fontWeight="bold"
+                      variant="outline"
+                      bgColor="#F1DAC4"
+                      _hover={{
+                        bgColor: "#EAC7A7",
+                        color: "#0D0C1D",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      CADASTRE-SE
+                    </Button>
+                  </Link>
                 </Box>
               </Stack>
               <Map />
